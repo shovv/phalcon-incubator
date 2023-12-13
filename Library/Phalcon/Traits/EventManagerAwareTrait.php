@@ -19,7 +19,7 @@
 
 namespace Phalcon\Traits;
 
-use Phalcon\Di;
+use Phalcon\Di\Di;
 use Phalcon\Events\Manager as EventsManager;
 
 /**

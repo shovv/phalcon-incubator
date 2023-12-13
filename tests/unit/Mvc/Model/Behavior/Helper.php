@@ -3,7 +3,7 @@
 namespace Phalcon\Test\Mvc\Model\Behavior;
 
 use Mockery;
-use Phalcon\Di;
+use Phalcon\Di\Di;
 use UnitTester;
 use ReflectionProperty;
 use CategoriesManyRoots;

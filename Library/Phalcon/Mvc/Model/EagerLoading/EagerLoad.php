@@ -2,7 +2,7 @@
 
 use Phalcon\Mvc\Model\Relation;
 use Phalcon\Mvc\Model\Resultset;
-use Phalcon\Version;
+use Phalcon\Support\Version;
 
 /**
  * Represents a level in the relations tree to be eagerly loaded

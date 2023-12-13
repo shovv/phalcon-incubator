@@ -2,7 +2,7 @@
 
 namespace Phalcon\Test\Validation\Validator\Db;
 
-use Phalcon\Di;
+use Phalcon\Di\Di;
 use Phalcon\Validation;
 use Codeception\Util\Stub;
 use Phalcon\Validation\Validator\Db\Uniqueness;

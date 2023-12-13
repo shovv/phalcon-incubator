@@ -19,7 +19,7 @@
 
 namespace Phalcon\Mvc;
 
-use Phalcon\Di;
+use Phalcon\Di\Di;
 use MongoDB\BSON\ObjectID;
 use MongoDB\Driver\WriteConcern;
 use MongoDB\BSON\Unserializable;
