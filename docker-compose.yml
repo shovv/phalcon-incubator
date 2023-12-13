@@ -1,4 +1,5 @@
-version: "3"
+version: '3.8'
+
 services:
   db:
     image: mysql
@@ -24,6 +25,7 @@ services:
     image: schickling/beanstalkd
     ports:
       - "11300:11300"
+
   memcached:
     image: memcached
     ports:

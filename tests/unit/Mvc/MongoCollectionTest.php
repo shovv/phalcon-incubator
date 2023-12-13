@@ -2,7 +2,7 @@
 
 namespace Phalcon\Test\Mvc;
 
-use Phalcon\Di;
+use Phalcon\Di\Di;
 use MongoDB\BSON\ObjectID;
 use MongoDB\Driver\Cursor;
 use Phalcon\Test\Codeception\UnitTestCase as Test;

@@ -4,7 +4,7 @@ namespace Phalcon\Test\Mvc\Model\Behavior;
 
 use Phalcon\Test\Codeception\UnitTestCase as Test;
 use Phalcon\Db\Adapter\Pdo\Mysql;
-use Phalcon\Di;
+use Phalcon\Di\Di;
 use Phalcon\Di\FactoryDefault;
 use Phalcon\Mvc\Model\Behavior\Blameable\Audit;
 use Phalcon\Mvc\Model\Behavior\Blameable\AuditDetail;

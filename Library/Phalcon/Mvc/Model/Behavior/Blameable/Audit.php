@@ -5,7 +5,7 @@ namespace Phalcon\Mvc\Model\Behavior\Blameable;
 use Phalcon\Http\Request;
 use Phalcon\Mvc\Model;
 use Phalcon\Mvc\ModelInterface;
-use Phalcon\Session\Adapter;
+use Phalcon\Session\Adapter\AbstractAdapter;
 
 /**
  * Phalcon\Mvc\Model\Behavior\Blameable\Audit
@@ -80,7 +80,7 @@ class Audit extends Model implements AuditInterface
     public function beforeValidation()
     {
         if (empty($this->userCallback)) {
-            /** @var Adapter $session */
+            /** @var AbstractAdapter $session */
             $session = $this->getDI()->get('session');
 
             //Get the username from session

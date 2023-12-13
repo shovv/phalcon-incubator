@@ -22,7 +22,7 @@ namespace Helper;
 use Codeception\Actor;
 use Phalcon\Mvc\Collection\Manager;
 use Phalcon\Db\Adapter\MongoDB\Client;
-use Phalcon\Di;
+use Phalcon\Di\Di;
 
 /**
  * Collection Initializer

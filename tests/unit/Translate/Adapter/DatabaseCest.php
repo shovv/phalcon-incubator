@@ -12,7 +12,7 @@
 namespace Phalcon\Test\Unit\Translate\Adapter;
 
 use UnitTester;
-use Phalcon\Di;
+use Phalcon\Di\Di;
 use Phalcon\Mvc\Model\Metadata\Memory;
 use Phalcon\Mvc\Model\Manager;
 use Phalcon\Db\Adapter\Pdo\Mysql;
