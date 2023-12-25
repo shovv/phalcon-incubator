@@ -3,7 +3,7 @@
 namespace Phalcon\Validation\Validator;
 
 use Phalcon\Test\UnitTestCase;
-use Phalcon\Filter\Validation;
+use Phalcon\Validation;
 
 class ArrayInclusionInTest extends UnitTestCase
 {

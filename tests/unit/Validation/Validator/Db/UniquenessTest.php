@@ -3,14 +3,14 @@
 namespace Phalcon\Test\Validation\Validator\Db;
 
 use Phalcon\Di\Di;
-use Phalcon\Filter\Validation;
+use Phalcon\Validation;
 use Codeception\Util\Stub;
-use Phalcon\Filter\Validation\Validator\Db\Uniqueness;
+use Phalcon\Validation\Validator\Db\Uniqueness;
 use Phalcon\Test\Codeception\UnitTestCase as Test;
 
 /**
  * \Phalcon\Test\Validation\Validator\Db\UniquenessTest
- * Tests for Phalcon\Filter\Validation\Validator\Db\Uniqueness component
+ * Tests for Phalcon\Validation\Validator\Db\Uniqueness component
  *
  * @copyright (c) 2011-2016 Phalcon Team
  * @link      http://www.phalconphp.com
@@ -71,7 +71,7 @@ class UniquenessTest extends Test
     }
 
     /**
-     * @expectedException        \Phalcon\Filter\Validation\Exception
+     * @expectedException        \Phalcon\Validation\Exception
      * @expectedExceptionMessage Validator Uniqueness require connection to database
      */
     public function testShouldCatchExceptionWhenValidateUniquenessWithoutDbAndDefaultDI()
@@ -85,7 +85,7 @@ class UniquenessTest extends Test
     }
 
     /**
-     * @expectedException        \Phalcon\Filter\Validation\Exception
+     * @expectedException        \Phalcon\Validation\Exception
      * @expectedExceptionMessage Validator require column option to be set
      */
     public function testShouldCatchExceptionWhenValidateUniquenessWithoutColumnOption()

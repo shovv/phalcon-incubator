@@ -3,14 +3,14 @@
 namespace Phalcon\Test\Collections;
 
 use Phalcon\Mvc\MongoCollection;
-use Phalcon\Filter\Validation;
-use Phalcon\Filter\Validation\Validator\Email;
-use Phalcon\Filter\Validation\Validator\ExclusionIn;
-use Phalcon\Filter\Validation\Validator\InclusionIn;
-use Phalcon\Filter\Validation\Validator\PresenceOf;
-use Phalcon\Filter\Validation\Validator\Regex;
-use Phalcon\Filter\Validation\Validator\StringLength;
-use Phalcon\Filter\Validation\Validator\Uniqueness;
+use Phalcon\Validation;
+use Phalcon\Validation\Validator\Email;
+use Phalcon\Validation\Validator\ExclusionIn;
+use Phalcon\Validation\Validator\InclusionIn;
+use Phalcon\Validation\Validator\PresenceOf;
+use Phalcon\Validation\Validator\Regex;
+use Phalcon\Validation\Validator\StringLength;
+use Phalcon\Validation\Validator\Uniqueness;
 
 class Users extends MongoCollection
 {

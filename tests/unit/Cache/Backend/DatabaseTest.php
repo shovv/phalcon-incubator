@@ -31,7 +31,7 @@ class DatabaseTest extends Test
 
     /**
      * @dataProvider incorrectDbProvider
-     * @expectedException \Phalcon\Cache\Exception\Exception
+     * @expectedException \Phalcon\Cache\Exception
      * @expectedExceptionMessage Parameter "db" is required and it must be an instance of Phalcon\Acl\AdapterInterface
      * @param array $options
      */

@@ -2,13 +2,13 @@
 
 namespace Phalcon\Test\Validation\Validator;
 
-use Phalcon\Filter\Validation;
+use Phalcon\Validation;
 use Phalcon\Test\Codeception\UnitTestCase as Test;
-use Phalcon\Filter\Validation\Validator\CardNumber;
+use Phalcon\Validation\Validator\CardNumber;
 
 /**
  * \Phalcon\Test\Validation\Validator\CardNumberTest
- * Tests for Phalcon\Filter\Validation\Validator\CardNumber component
+ * Tests for Phalcon\Validation\Validator\CardNumber component
  *
  * @copyright (c) 2011-2016 Phalcon Team
  * @link      http://www.phalconphp.com

@@ -21,17 +21,17 @@ namespace Phalcon\Test\Validation\Validator;
 
 use Phalcon\Test\Codeception\UnitTestCase as Test;
 use Codeception\Util\Stub;
-use Phalcon\Filter\Validation\Validator\ConfirmationOf;
+use Phalcon\Validation\Validator\ConfirmationOf;
 
 class ConfirmationOfTest extends Test
 {
     public function testValidateExceptionWithoutOrigField()
     {
-        $validation = Stub::make('Phalcon\Filter\Validation');
+        $validation = Stub::make('Phalcon\Validation');
 
         $validator = new ConfirmationOf();
 
-        $this->setExpectedException('Phalcon\Filter\Validation\Exception');
+        $this->setExpectedException('Phalcon\Validation\Exception');
 
         $validator->validate($validation, 'confirmation');
     }
@@ -39,7 +39,7 @@ class ConfirmationOfTest extends Test
     public function testValidateSameAsOrig()
     {
         $validation = Stub::make(
-            'Phalcon\Filter\Validation',
+            'Phalcon\Validation',
             [
                 'getValue' => 'value',
             ]
@@ -59,7 +59,7 @@ class ConfirmationOfTest extends Test
     public function testValidateNotSameAsOrig()
     {
         $validation = Stub::make(
-            'Phalcon\Filter\Validation',
+            'Phalcon\Validation',
             [
                 'getValue'      => Stub::consecutive('val1', 'val2'),
                 'appendMessage' => true,
@@ -80,7 +80,7 @@ class ConfirmationOfTest extends Test
     public function testValidateAllowEmpty()
     {
         $validation = Stub::make(
-            'Phalcon\Filter\Validation',
+            'Phalcon\Validation',
             [
                 'getValue' => Stub::consecutive('', 'val2'),
             ]
@@ -101,7 +101,7 @@ class ConfirmationOfTest extends Test
     public function testValidateNotAllowEmpty()
     {
         $validation = Stub::make(
-            'Phalcon\Filter\Validation',
+            'Phalcon\Validation',
             [
                 'getValue'      => Stub::consecutive('', 'val2'),
                 'appendMessage' => true,
@@ -123,7 +123,7 @@ class ConfirmationOfTest extends Test
     public function testValidateInvalidValue()
     {
         $validation = Stub::make(
-            'Phalcon\Filter\Validation',
+            'Phalcon\Validation',
             [
                 'getValue'      => ['value', 'value'],
                 'appendMessage' => true,

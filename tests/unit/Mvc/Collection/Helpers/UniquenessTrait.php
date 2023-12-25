@@ -3,8 +3,8 @@
 namespace Phalcon\Test\Mvc\Collection\Helpers;
 
 use DateTime;
-use Phalcon\Filter\Validation;
-use Phalcon\Filter\Validation\Validator\Uniqueness;
+use Phalcon\Validation;
+use Phalcon\Validation\Validator\Uniqueness;
 use UnitTester;
 
 trait UniquenessTrait

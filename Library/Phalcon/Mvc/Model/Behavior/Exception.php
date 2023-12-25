@@ -2,6 +2,6 @@
 
 namespace Phalcon\Mvc\Model\Behavior;
 
-class Exception extends \Phalcon\Exception
+class Exception extends \Exception
 {
 }

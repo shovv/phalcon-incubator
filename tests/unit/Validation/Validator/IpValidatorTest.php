@@ -2,12 +2,12 @@
 
 namespace Phalcon\Test\Validation\Validator;
 
-use Phalcon\Filter\Validation;
+use Phalcon\Validation;
 use Phalcon\Test\Codeception\UnitTestCase as Test;
 
 /**
  * \Phalcon\Test\Validation\Validator\IpValidatorTest
- * Tests for Phalcon\Filter\Validation\Validator\IpValidator component
+ * Tests for Phalcon\Validation\Validator\IpValidator component
  *
  * @copyright (c) 2011-2017 Phalcon Team
  * @link      http://www.phalconphp.com
@@ -32,7 +32,7 @@ class IpValidatorTest extends Test
 
         $validation->add(
             'ip',
-            new \Phalcon\Filter\Validation\Validator\IpValidator(
+            new \Phalcon\Validation\Validator\IpValidator(
                 [
                     'message' => 'The IP is not valid.',
                 ]
@@ -55,7 +55,7 @@ class IpValidatorTest extends Test
 
         $validation->add(
             'ip',
-            new \Phalcon\Filter\Validation\Validator\IpValidator(
+            new \Phalcon\Validation\Validator\IpValidator(
                 [
                     'message' => 'The IP is not valid.',
                 ]
