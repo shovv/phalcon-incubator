@@ -1,8 +1,8 @@
 <?php
 namespace Phalcon\Mvc\View\Engine;
 
-use Phalcon\DiInterface;
-use Phalcon\Mvc\View\Engine;
+use Phalcon\Di\DiInterface;
+use Phalcon\Mvc\View\Engine\AbstractEngine;
 use Phalcon\Mvc\View\EngineInterface;
 use Phalcon\Mvc\ViewBaseInterface;
 
@@ -10,7 +10,7 @@ use Phalcon\Mvc\ViewBaseInterface;
  * Phalcon\Mvc\View\Engine\Twig
  * Adapter to use Twig library as templating engine
  */
-class Twig extends Engine implements EngineInterface
+class Twig extends AbstractEngine implements EngineInterface
 {
     /**
      * @var \Phalcon\Mvc\View\Engine\Twig\Environment

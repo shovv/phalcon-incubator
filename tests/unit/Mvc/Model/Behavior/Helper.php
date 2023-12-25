@@ -7,7 +7,7 @@ use Phalcon\Di\Di;
 use UnitTester;
 use ReflectionProperty;
 use CategoriesManyRoots;
-use Phalcon\DiInterface;
+use Phalcon\Di\DiInterface;
 use Codeception\Specify;
 use Phalcon\Mvc\Model\Manager;
 use Phalcon\Test\Codeception\UnitTestCase as Test;

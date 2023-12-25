@@ -20,8 +20,8 @@
 namespace Phalcon\Test\Validation\Validator;
 
 use Phalcon\Test\Codeception\UnitTestCase as Test;
-use Phalcon\Validation\Validator\Iban;
-use Phalcon\Validation;
+use Phalcon\Filter\Validation\Validator\Iban;
+use Phalcon\Filter\Validation;
 
 class IbanTest extends Test
 {

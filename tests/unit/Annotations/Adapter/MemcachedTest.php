@@ -5,7 +5,7 @@ namespace Phalcon\Test\Annotations\Adapter;
 use stdClass;
 use ReflectionMethod;
 use Phalcon\Test\Codeception\UnitTestCase as Test;
-use Phalcon\Cache\Backend\Libmemcached;
+use Phalcon\Cache\Adapter\Libmemcached;
 use Phalcon\Annotations\Adapter\Memcached;
 
 /**

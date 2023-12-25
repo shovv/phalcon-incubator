@@ -6,7 +6,7 @@ use ReflectionMethod;
 use ReflectionProperty;
 use Phalcon\Test\Codeception\UnitTestCase as Test;
 use Phalcon\Annotations\Adapter\Redis;
-use Phalcon\Cache\Backend\Redis as CacheBackend;
+use Phalcon\Cache\Adapter\Redis as CacheBackend;
 
 /**
  * \Phalcon\Test\Annotations\Adapter\RedisTest

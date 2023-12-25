@@ -19,7 +19,7 @@
 
 namespace Phalcon\Mvc\View\Engine\Twig;
 
-use Phalcon\DiInterface;
+use Phalcon\Di\DiInterface;
 
 /**
  * \Phalcon\Mvc\View\Engine\Twig\Environment

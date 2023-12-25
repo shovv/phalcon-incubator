@@ -1,8 +1,8 @@
 <?php
 namespace Phalcon\Mvc\View\Engine;
 
-use Phalcon\DiInterface;
-use Phalcon\Mvc\View\Engine;
+use Phalcon\Di\DiInterface;
+use Phalcon\Mvc\View\Engine\AbstractEngine;
 use Phalcon\Mvc\View\EngineInterface;
 use Phalcon\Mvc\ViewBaseInterface;
 
@@ -10,7 +10,7 @@ use Phalcon\Mvc\ViewBaseInterface;
  * Phalcon\Mvc\View\Engine\Smarty
  * Adapter to use Smarty library as templating engine
  */
-class Smarty extends Engine implements EngineInterface
+class Smarty extends AbstractEngine implements EngineInterface
 {
     /**
      * @var \Smarty

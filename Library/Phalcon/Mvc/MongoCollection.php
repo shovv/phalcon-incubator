@@ -24,7 +24,7 @@ use MongoDB\BSON\ObjectID;
 use MongoDB\Driver\WriteConcern;
 use MongoDB\BSON\Unserializable;
 use Phalcon\Mvc\Collection\Document;
-use Phalcon\Mvc\Collection\Exception;
+use Phalcon\Collection\Exception;
 use Phalcon\Mvc\Collection\ManagerInterface;
 use Phalcon\Db\Adapter\MongoDB\InsertOneResult;
 use Phalcon\Mvc\Collection as PhalconCollection;

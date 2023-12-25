@@ -2,13 +2,13 @@
 
 namespace Phalcon\Test\Mvc\Model\Validator;
 
-use Phalcon\Validation;
-use Phalcon\Validation\Validator\Decimal;
+use Phalcon\Filter\Validation;
+use Phalcon\Filter\Validation\Validator\Decimal;
 use Phalcon\Test\Codeception\UnitTestCase as Test;
 
 /**
  * \Phalcon\Test\Validation\Validator\DecimalTest
- * Tests for Phalcon\Validation\Validator\Decimal component
+ * Tests for Phalcon\Filter\Validation\Validator\Decimal component
  *
  * @copyright (c) 2011-2016 Phalcon Team
  * @link      http://www.phalconphp.com
@@ -26,7 +26,7 @@ use Phalcon\Test\Codeception\UnitTestCase as Test;
 class DecimalTest extends Test
 {
     /**
-     * @expectedException        \Phalcon\Validation\Exception
+     * @expectedException        \Phalcon\Filter\Validation\Exception
      * @expectedExceptionMessage A number of decimal places must be set
      */
     public function testShouldCatchExceptionWhenMissedPlacesInDecimalValidation()

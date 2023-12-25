@@ -2,13 +2,13 @@
 
 namespace Phalcon\Test\Validation\Validator;
 
-use Phalcon\Validation;
+use Phalcon\Filter\Validation;
 use Phalcon\Test\Codeception\UnitTestCase;
-use Phalcon\Validation\Validator\AlphaNamesValidator;
+use Phalcon\Filter\Validation\Validator\AlphaNamesValidator;
 
 /**
  * \Phalcon\Test\Validation\Validator\AlphaNamesValidatorTest
- * Tests for Phalcon\Validation\Validator\AlphaNamesValidator component
+ * Tests for Phalcon\Filter\Validation\Validator\AlphaNamesValidator component
  *
  * @copyright (c) 2011-2017 Phalcon Team
  * @link      http://www.phalconphp.com

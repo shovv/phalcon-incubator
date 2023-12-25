@@ -10,7 +10,7 @@ use Phalcon\Test\Mvc\Model\EagerLoading\Stubs\Robot;
 use Phalcon\Test\Mvc\Model\EagerLoading\Stubs\Manufacturer;
 use Phalcon\Mvc\Model\EagerLoading\Loader;
 use Phalcon\Di\Di;
-use Phalcon\DiInterface;
+use Phalcon\Di\DiInterface;
 use Phalcon\Mvc\Model\Metadata;
 use Phalcon\Mvc\Model\Manager;
 use Phalcon\Db\Adapter\Pdo\Mysql;

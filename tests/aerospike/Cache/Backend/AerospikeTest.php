@@ -55,7 +55,7 @@ class AerospikeTest extends Test
     }
 
     /**
-     * @expectedException \Phalcon\Cache\Exception
+     * @expectedException \Phalcon\Cache\Exception\Exception
      * @expectedExceptionMessage The cache must be started first
      */
     public function testShouldThrowExceptionIfCacheIsNotStarted()

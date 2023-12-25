@@ -5,6 +5,7 @@
 ### Installing and configuring
 
 First you need to configure model as follows:
+
 ```php
 use Phalcon\Mvc\Model\Behavior\NestedSet as NestedSetBehavior;
 
@@ -30,10 +31,10 @@ There is no need to validate fields specified in `leftAttribute`, `rightAttribut
 
 By default:
 
-* `leftAttribute` = `lft`
-* `rightAttribute` = `rgt`
-* `levelAttribute` = `level`
-* `rootAttribute` = `root`
+- `leftAttribute` = `lft`
+- `rightAttribute` = `rgt`
+- `levelAttribute` = `level`
+- `rootAttribute` = `root`
 
 so you can skip configuring these.
 
@@ -44,6 +45,7 @@ In multiple trees mode you can set `rootAttribute` option to match existing fiel
 ### Selecting from a tree
 
 In the following we'll use an example model Category with the following in its DB:
+
 ```
 - 1. Mobile phones
     - 2. iPhone
@@ -56,6 +58,7 @@ In the following we'll use an example model Category with the following in its D
     - 9. Ford
     - 10. Mercedes
 ```
+
 In this example we have two trees. Tree `roots` are ones with ID=1 and ID=7.
 
 #### Getting all roots
@@ -63,9 +66,11 @@ In this example we have two trees. Tree `roots` are ones with ID=1 and ID=7.
 ```php
 $roots = (new Categories())->roots();
 ```
+
 Result: result set containing Mobile phones and Cars nodes.
 
 You can also add the following method to the model if you use a single root:
+
 ```php
 public static function getRoot()
 {
@@ -74,6 +79,7 @@ public static function getRoot()
 ```
 
 Or the following method if you use multiple roots:
+
 ```php
 public static function getRoots()
 {
@@ -131,6 +137,7 @@ Result: Mercedes node and Audi node.
 
 You can get the whole tree using standard model methods like the following.
 For single tree per table:
+
 ```php
 Categories::find(
     [
@@ -140,6 +147,7 @@ Categories::find(
 ```
 
 For multiple trees per table:
+
 ```php
 Categories::find(
     [
@@ -172,6 +180,7 @@ $root->saveNode();
 ```
 
 Result:
+
 ```
 - 1. Mobile Phones
 - 2. Cars
@@ -180,6 +189,7 @@ Result:
 #### Adding child nodes
 
 There are multiple methods allowing you adding child nodes. Let's use these to add nodes to the tree we have:
+
 ```php
 $category1 = new Categories();
 $category1->title = 'Ford';
@@ -197,6 +207,7 @@ $category3->insertBefore($category1);
 ```
 
 Result:
+
 ```
 - 1. Mobile phones
     - 3. Audi
@@ -206,6 +217,7 @@ Result:
 ```
 
 Logically the tree above does not looks correct. We'll fix it later.
+
 ```php
 $category1 = new Categories();
 $category1->title = 'Samsung';
@@ -223,6 +235,7 @@ $category3->prependTo($root);
 ```
 
 Result:
+
 ```
 - 1. Mobile phones
     - 3. Audi
@@ -247,6 +260,7 @@ $category2->prependTo($node);
 ```
 
 Result:
+
 ```
 - 1. Mobile phones
     - 3. Audi
@@ -268,6 +282,7 @@ In this section we'll finally make our tree logical.
 
 There are several methods allowing you to modify a tree.
 Let's start:
+
 ```php
 // move phones to the proper place
 $x100 = Categories::findFirst(10);
@@ -300,6 +315,7 @@ foreach ([$audi,$ford,$mercedes] as $category) {
 ```
 
 Result:
+
 ```
 - 1. Mobile phones
     - 6. iPhone
@@ -314,19 +330,23 @@ Result:
 ```
 
 #### Moving a node making it a new root
+
 There is a special `moveAsRoot()` method that allows moving a node and making it a new root.
 All descendants are moved as well in this case.
 
 Example:
+
 ```php
 $node = Categories::findFirst(10);
 $node->moveAsRoot();
 ```
 
 #### Identifying node type
+
 There are three methods to get node type: `isRoot()`, `isLeaf()`, `isDescendantOf()`.
 
 Example:
+
 ```php
 $root = Categories::findFirst(1);
 var_dump($root->isRoot()); // true;
@@ -340,6 +360,7 @@ var_dump($node->isLeaf()); // true;
 $samsung = Categories::findFirst(7);
 var_dump($node->isDescendantOf($samsung)); // true;
 ```
+
 ### Useful code
 
 #### Non-recursive tree traversal
@@ -408,8 +429,8 @@ CREATE TABLE `audit_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
-This is an example structure, please fit fields to suit your needs. By default incubator provides needed classes for Blameable behavior, however if you would 
-want to use your own classes you can do it by implementing `AuditDetailInterface` and 
+This is an example structure, please fit fields to suit your needs. By default incubator provides needed classes for Blameable behavior, however if you would
+want to use your own classes you can do it by implementing `AuditDetailInterface` and
 `AuditInterface` and setting them in constructor:
 
 ```php
@@ -432,7 +453,7 @@ Also by default `Audit` class will look for userName key in session for getting 
 You can change this behavior by:
 
 ```php
-use Phalcon\DiInterface;
+use Phalcon\Di\DiInterface;
 use Phalcon\Mvc\Model\Behavior\Blameable;
 
 public function initialize()
@@ -466,4 +487,3 @@ public function initialize()
     );
 }
 ```
-

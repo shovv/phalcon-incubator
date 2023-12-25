@@ -5,7 +5,7 @@ namespace Phalcon\Test\Annotations\Adapter;
 use ReflectionProperty;
 use Phalcon\Test\Codeception\UnitTestCase as Test;
 use Phalcon\Annotations\Adapter\Base;
-use Phalcon\Cache\Backend\Memory as CacheBackend;
+use Phalcon\Cache\Adapter\Memory as CacheBackend;
 use Phalcon\Cache\Frontend\Data as CacheFrontend;
 
 /**

@@ -3,14 +3,14 @@
 namespace Phalcon\Test\Unit5x\Validation\Validator;
 
 use ReflectionExtension;
-use Phalcon\Validation;
-use Phalcon\Validation\Validator\MongoId;
+use Phalcon\Filter\Validation;
+use Phalcon\Filter\Validation\Validator\MongoId;
 use Phalcon\Test\Codeception\UnitTestCase as Test;
 use UnitTester;
 
 /**
  * \Phalcon\Test\Validation\Validator\MongoIdTest
- * Tests for Phalcon\Validation\Validator\MongoId component
+ * Tests for Phalcon\Filter\Validation\Validator\MongoId component
  *
  * @copyright (c) 2011-2016 Phalcon Team
  * @link      http://www.phalconphp.com

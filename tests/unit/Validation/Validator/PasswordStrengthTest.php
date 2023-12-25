@@ -19,9 +19,9 @@
 
 namespace Phalcon\Test\Validation\Validator;
 
-use Phalcon\Validation;
+use Phalcon\Filter\Validation;
 use Phalcon\Test\Codeception\UnitTestCase as Test;
-use Phalcon\Validation\Validator\PasswordStrength;
+use Phalcon\Filter\Validation\Validator\PasswordStrength;
 
 class PasswordStrengthTest extends Test
 {

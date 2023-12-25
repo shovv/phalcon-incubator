@@ -4,7 +4,7 @@ namespace Phalcon\Test\Mvc\Collection\Helpers;
 
 use DateTime;
 use Phalcon\Test\Collections\Users;
-use Phalcon\Mvc\Model\Message;
+use Phalcon\Messages\Message;
 use UnitTester;
 
 class ValidationBase
