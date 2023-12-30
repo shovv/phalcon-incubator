@@ -42,12 +42,12 @@ class Curl extends Request
         }
 
         $this->handle = curl_init();
-        if (!is_resource($this->handle)) {
-            throw new HttpException(
-                curl_error($this->handle),
-                'curl'
-            );
-        }
+
+        // if (!is_resource($this->handle)) {
+        //     throw new HttpException(
+        //         curl_error($this->handle)
+        //     );
+        // }
 
         $this->initOptions();
         parent::__construct();
@@ -203,8 +203,7 @@ class Curl extends Request
 
         if ($errno = curl_errno($this->handle)) {
             throw new HttpException(
-                curl_error($this->handle),
-                $errno
+                curl_error($this->handle).$errno
             );
         }
 
